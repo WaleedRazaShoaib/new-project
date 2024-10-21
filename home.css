@@ -9,10 +9,11 @@
 body {
   font-family: "Arial", sans-serif;
 }
-
-.navbar {
+ /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* //////////////////////////////////////////  Navbar          /////////////////////////////////// */
+ /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+ .navbar {
   font-family: "Karla", sans-serif;
-
   padding: 15px 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -69,6 +70,11 @@ img.vecttwo {
   border: none;
 }
 
+ /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* //////////////////////////////////////////  pic section     /////////////////////////////////// */
+ /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
 .picsec {
   background-image: url(home.png);
   background-size: cover;
@@ -113,28 +119,116 @@ img.vecttwo {
 }
 
 
-.slidersec {
-  width: 100%;
-  display: flex;
 
+
+
+ /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ////////////////////////////////////// carasoul container    ////////////////////////////////// */
+ /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.slider-container li{
+background-image: url(Group\ 8.png);
+}
+
+
+.slidersec {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
 }
 
 .firstpic img {
   max-width: 360px;
 }
 
-.textsec {
-  width: 45%;
-  padding: 90px 40px;
+.swiffy-slider {
+  max-width: 550px;
+}
+
+
+.slider-container li h2 {
+  font-weight: 400;
+  margin-top: 730px;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Karla", sans-serif;
+
+}
+
+.product-price {
+  font-family: "Karla", sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.new-price {
+  color: #3D4432;
+  font-weight: bold;
 }
 
 .textsec h1 {
-  font-size: 40px;
+  font-size: 2em;
+  line-height: 1.3;
+}
+
+.textsec .highlight {
+  color: #3D4432;
 }
 
 .textsec p {
-  font-size: 16px;
-  line-height: 24px;
+  margin: 20px 0;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.learn-more-btn {
+  background-color: transparent;
+  border: 2px solid #3D4432;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #3D4432;
+  color: #fff;
+}
+
+
+
+
+
+
+
+.slider-container li img{
+/* height:40vh !important; */
+
+}
+
+.carousel-product-info{
+  text-align: center;
+  margin-top:0%;
+}
+
+
+
+
+
+
+
+
+
+
+.textsec {
+  /* width: 856px !important; */
+ max-width: 856px ;
+  padding: 90px 40px;
 }
 
 .textsec button {
@@ -142,47 +236,14 @@ img.vecttwo {
   max-width: 180px;
   height: auto;
   padding: 15px;
-}
-
-.carousel-container {
-  max-width: 690px;
-background-color: #FAF8F6;
-  text-align: center;
-  position: relative;
-}
-
-
-.carousel img {
-  height: 100vh !important;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Product info */
-.carousel-product-info h2 {
+  background-color: white;
   font-family: "Karla", sans-serif;
-  /* padding: 40px; */
-  font-size: 40px;
-  font-weight: 400;
+  border: 2px solid black;
+  font-size: 20px;
+  width: 180px;
+  margin-top: 10px;
+  height: 71px
 }
-
-.product-price {
-  margin-top: 5px;
-  font-size: 1.1rem;
-}
-
-.old-price {
-  text-decoration: line-through;
-  color: gray;
-  margin-right: 5px;
-}
-
-.new-price {
-  color: green;
-  font-weight: bold;
-}
-
-
 
 
 .textsec h1 {
@@ -199,136 +260,8 @@ background-color: #FAF8F6;
   word-spacing: 3px;
 }
 
-.textsec button {
-  background-color: white;
-    font-family: "Karla", sans-serif;
-  border: 2px solid black;
-  font-size: 20px;
-  width: 180px;
-  margin-top: 10px;
-  height: 71px;
-}
 
 
-
-.carousel {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-}
-
-.carousel img {
-  width: 100%;
-  height: 75vh;
-  object-fit: cover;
-  display: none;
-  transition: opacity 0.5s ease;
-}
-
-.carousel img.active {
-  display: block;
-}
-
-/* Carousel buttons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-/* Product info */
-.carousel-product-info h2 {
-  font-family: "Karla", sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-}
-
-.product-price {
-  margin-top: 5px;
-  font-size: 1.1rem;
-}
-
-.old-price {
-  text-decoration: line-through;
-  color: gray;
-  margin-right: 5px;
-}
-
-.new-price {
-  color: green;
-  font-weight: bold;
-}
-
-@media (max-width: 1024px) {
-  .textsec h1 {
-
-    font-size: 40px;
-  }
-
-  .firstpic {
-    display: none;
-  }
-
-  .textsec {
-    width: 60%;
-    padding: 80px 10px;
-  }
-
-  
-
-  
-}
-
-@media (max-width: 768px) {
-  .firstpic {
-    display: none;
-  }
-
-  .slidersec {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .textsec {
-    width: 100%;
-    padding: 30px;
-    justify-content: center;
-    /* text-align: center;  */
-  }
-
-  .textsec h1 {
-    font-size: 40px !important;
-    /* Reduce font size */
-  }
-
-  .textsec p {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .carousel img {
-    height: 50vh;
-    /* Adjust height for smaller screens */
-  }
-
-  .carousel-product-info h2 {
-    font-size: 30px;
-  }
-}
 
 
 @media (max-width: 768px) {
@@ -435,12 +368,6 @@ background-color: #FAF8F6;
   }
 
 
-
-
-
-
-
-
   .textsec p {
     font-size: 14px;
     line-height: 22px;
@@ -450,28 +377,5 @@ background-color: #FAF8F6;
     font-size: 16px;
     width: 150px;
     height: 50px;
-  }
-
-  .carousel img {
-    height: 40vh;
-    /* Smaller height on mobile */
-  }
-
-  .carousel-product-info h2 {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-btn {
-    padding: 5px;
-    font-size: 12px;
-    /* Smaller buttons on small screens */
-  }
-
-  
-
-  .carousel-product-info .product-price {
-    font-size: 16px;
   }
 }
